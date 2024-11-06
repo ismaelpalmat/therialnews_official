@@ -1,0 +1,17 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <% content_for :title, "Articles" %>
+
+  <h1>Noticias</h1><br>
+
+  <div id="articles">
+    <% @articles.each do |article| %>
+      <%= render article %>
+      <p>
+        <%= link_to "Show this article", article %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New article", new_article_path %>
+</div
